@@ -1,0 +1,122 @@
+/*
+	(c)2016 stygix.org
+	 color: #ff0000;
+*/
+
+body {
+  background-color: #000000;
+  font-family: monospace;
+  color: #47e10c;
+  padding-right: 0px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  width: 850px;
+  font-size: 140%;
+}
+.date {
+  font-weight: bold;
+}
+.navlist {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.subnav {
+  margin-left: 20px;
+}
+#everything {
+  width: 850px;
+}
+#title {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+#tagline {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+#poweredby {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+#news-nav-container {
+  display: table-row;
+}
+#nav-cell {
+  display: table-cell;
+  width: 300px;
+}
+#news-cell {
+  display: table-cell;
+  width: 850px;
+  padding-left: 10px;
+}
+#content-container {
+  width: 600px;
+}
+.contentblockinfo {
+  position: relative;
+  left: 50px;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.3em;
+}
+p {
+  text-indent: 15px;
+}
+em {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2em;
+}
+a:link {
+text-decoration: none;
+color:#cccccc;
+}
+
+a:visited {
+color:#999999;
+text-decoration: none;
+}
+
+a:hover {
+color:#ffffff;
+font-weight: bold;
+}
+
+/*
+     FILE ARCHIVED ON 05:28:18 Feb 19, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 06:22:46 Aug 10, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 113.023 (3)
+  esindex: 0.006
+  captures_list: 126.445
+  CDXLines.iter: 9.443 (3)
+  PetaboxLoader3.datanode: 25.817 (4)
+  exclusion.robots: 0.17
+  exclusion.robots.policy: 0.16
+  RedisCDXSource: 1.63
+  PetaboxLoader3.resolve: 75.387
+  load_resource: 79.711
+*/
