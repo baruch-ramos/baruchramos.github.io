@@ -58,8 +58,15 @@
     </div>
 
     <footer>
-      <p>&copy; 2026 Baruch Ramos · Powered by <a href="https://www.freebsd.org/" target="_blank" rel="noopener noreferrer">FreeBSD</a> and <a href="https://nginx.org/" target="_blank" rel="noopener noreferrer">NGINX</a>.</p>
+      <p>&copy; <time id="current-year" datetime="2026">2026</time> Baruch Ramos · Powered by <a href="https://www.freebsd.org/" target="_blank" rel="noopener noreferrer">FreeBSD</a> and <a href="https://nginx.org/" target="_blank" rel="noopener noreferrer">NGINX</a>.</p>
     </footer>
   </div>
+
+  <script>
+    const currentYear = String(new Date().getFullYear());
+    const yearElement = document.getElementById("current-year");
+    yearElement.textContent = currentYear;
+    yearElement.dateTime = currentYear;
+  </script>
 </body>
 </html>
