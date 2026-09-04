@@ -1,122 +1,159 @@
-/*
-	(c)2016 stygix.org
-	 color: #ff0000;
-*/
+:root {
+  color-scheme: dark;
+  --background: #000000;
+  --text: #47e10c;
+  --link: #cccccc;
+  --link-visited: #a7a7a7;
+  --link-active: #ffffff;
+  --focus: #ffd166;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
 
 body {
-  background-color: #000000;
-  font-family: monospace;
-  color: #47e10c;
-  padding-right: 0px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-right: 0px;
-  margin-left: 10px;
-  width: 850px;
-  font-size: 140%;
-}
-.date {
-  font-weight: bold;
-}
-.navlist {
-  margin-top: 10px;
-  margin-left: 20px;
-}
-.subnav {
-  margin-left: 20px;
-}
-#everything {
-  width: 850px;
-}
-#title {
-  font-size: 2.5em;
-  font-weight: bold;
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: clamp(1rem, 0.95rem + 0.35vw, 1.25rem);
+  line-height: 1.55;
 }
 
-#tagline {
-  font-size: 1.4em;
-  margin-bottom: 20px;
-}
-#poweredby {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px;
-  margin-top: 40px;
-  font-size: 0.9em;
-}
-#news-nav-container {
-  display: table-row;
-}
-#nav-cell {
-  display: table-cell;
-  width: 300px;
-}
-#news-cell {
-  display: table-cell;
-  width: 850px;
-  padding-left: 10px;
-}
-#content-container {
-  width: 600px;
-}
-.contentblockinfo {
-  position: relative;
-  left: 50px;
+.site-container {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+  padding-block: 1.5rem 1rem;
 }
 
-h1 {
-  font-size: 1.5em;
-  font-weight: bold;
+.site-header h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 7vw, 3.5rem);
+  line-height: 1.1;
 }
-h2 {
-  font-size: 1.4em;
+
+.tagline {
+  margin: 0.5rem 0 2rem;
+  font-size: clamp(1.15rem, 3vw, 1.65rem);
 }
-h3 {
-  font-size: 1.3em;
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(10rem, 13rem) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
 }
-p {
-  text-indent: 15px;
+
+.sidebar section + section {
+  margin-top: 2rem;
 }
-em {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 1.2em;
+
+.sidebar h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
 }
-a:link {
-text-decoration: none;
-color:#cccccc;
+
+.sidebar ul {
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+}
+
+.sidebar li + li {
+  margin-top: 0.35rem;
+}
+
+main p {
+  margin: 0 0 1.25rem;
+  text-wrap: pretty;
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--text) 45%, transparent);
+  font-size: 0.85em;
+}
+
+footer p {
+  margin: 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
 }
 
 a:visited {
-color:#999999;
-text-decoration: none;
+  color: var(--link-visited);
 }
 
 a:hover {
-color:#ffffff;
-font-weight: bold;
+  color: var(--link-active);
 }
 
-/*
-     FILE ARCHIVED ON 05:28:18 Feb 19, 2018 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 06:22:46 Aug 10, 2018.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+a:focus-visible {
+  color: var(--background);
+  background: var(--focus);
+  outline: 0.2rem solid var(--focus);
+  outline-offset: 0.15rem;
+}
 
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  LoadShardBlock: 113.023 (3)
-  esindex: 0.006
-  captures_list: 126.445
-  CDXLines.iter: 9.443 (3)
-  PetaboxLoader3.datanode: 25.817 (4)
-  exclusion.robots: 0.17
-  exclusion.robots.policy: 0.16
-  RedisCDXSource: 1.63
-  PetaboxLoader3.resolve: 75.387
-  load_resource: 79.711
-*/
+.skip-link {
+  position: fixed;
+  z-index: 1;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.4rem 0.65rem;
+  color: var(--background);
+  background: var(--focus);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (max-width: 42rem) {
+  .site-container {
+    width: min(100% - 1.25rem, 68rem);
+    padding-top: 1rem;
+  }
+
+  .tagline {
+    margin-bottom: 1.5rem;
+  }
+
+  .page-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .sidebar section + section {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 24rem) {
+  .sidebar nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a {
+    transition: color 120ms ease, background-color 120ms ease;
+  }
+}
